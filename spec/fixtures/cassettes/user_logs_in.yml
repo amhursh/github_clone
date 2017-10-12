@@ -1,0 +1,154 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/user
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - token <USER_TOKEN>
+      User-Agent:
+      - Faraday v0.12.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 12 Oct 2017 15:20:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4992'
+      X-Ratelimit-Reset:
+      - '1507824371'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      Etag:
+      - W/"5b4c2bc66b89b8a866bc9909a562bc4e"
+      Last-Modified:
+      - Wed, 11 Oct 2017 04:12:35 GMT
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Oauth-Client-Id:
+      - c113b374d63d5b1def5c
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Runtime-Rack:
+      - '0.042402'
+      X-Github-Request-Id:
+      - CD09:1066:23F76E9:43036D3:59DF8858
+    body:
+      encoding: ASCII-8BIT
+      string: '{"login":"amhursh","id":28369772,"avatar_url":"https://avatars2.githubusercontent.com/u/28369772?v=4","gravatar_id":"","url":"https://api.github.com/users/amhursh","html_url":"https://github.com/amhursh","followers_url":"https://api.github.com/users/amhursh/followers","following_url":"https://api.github.com/users/amhursh/following{/other_user}","gists_url":"https://api.github.com/users/amhursh/gists{/gist_id}","starred_url":"https://api.github.com/users/amhursh/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/amhursh/subscriptions","organizations_url":"https://api.github.com/users/amhursh/orgs","repos_url":"https://api.github.com/users/amhursh/repos","events_url":"https://api.github.com/users/amhursh/events{/privacy}","received_events_url":"https://api.github.com/users/amhursh/received_events","type":"User","site_admin":false,"name":"Aaron
+        Hursh","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"public_repos":30,"public_gists":3,"followers":0,"following":0,"created_at":"2017-05-03T22:38:53Z","updated_at":"2017-10-11T04:12:35Z"}'
+    http_version: 
+  recorded_at: Thu, 12 Oct 2017 15:20:57 GMT
+- request:
+    method: get
+    uri: https://api.github.com/user/starred
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - token <USER_TOKEN>
+      User-Agent:
+      - Faraday v0.12.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 12 Oct 2017 15:20:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4991'
+      X-Ratelimit-Reset:
+      - '1507824371'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      Etag:
+      - W/"9e50729276f4a21314a9934a83125827"
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Oauth-Client-Id:
+      - c113b374d63d5b1def5c
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Runtime-Rack:
+      - '0.037232'
+      X-Github-Request-Id:
+      - CD0A:1066:23F78C3:4303A7C:59DF885B
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":103193573,"name":"music_shop","full_name":"amhursh/music_shop","owner":{"login":"amhursh","id":28369772,"avatar_url":"https://avatars2.githubusercontent.com/u/28369772?v=4","gravatar_id":"","url":"https://api.github.com/users/amhursh","html_url":"https://github.com/amhursh","followers_url":"https://api.github.com/users/amhursh/followers","following_url":"https://api.github.com/users/amhursh/following{/other_user}","gists_url":"https://api.github.com/users/amhursh/gists{/gist_id}","starred_url":"https://api.github.com/users/amhursh/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/amhursh/subscriptions","organizations_url":"https://api.github.com/users/amhursh/orgs","repos_url":"https://api.github.com/users/amhursh/repos","events_url":"https://api.github.com/users/amhursh/events{/privacy}","received_events_url":"https://api.github.com/users/amhursh/received_events","type":"User","site_admin":false},"private":false,"html_url":"https://github.com/amhursh/music_shop","description":null,"fork":false,"url":"https://api.github.com/repos/amhursh/music_shop","forks_url":"https://api.github.com/repos/amhursh/music_shop/forks","keys_url":"https://api.github.com/repos/amhursh/music_shop/keys{/key_id}","collaborators_url":"https://api.github.com/repos/amhursh/music_shop/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/amhursh/music_shop/teams","hooks_url":"https://api.github.com/repos/amhursh/music_shop/hooks","issue_events_url":"https://api.github.com/repos/amhursh/music_shop/issues/events{/number}","events_url":"https://api.github.com/repos/amhursh/music_shop/events","assignees_url":"https://api.github.com/repos/amhursh/music_shop/assignees{/user}","branches_url":"https://api.github.com/repos/amhursh/music_shop/branches{/branch}","tags_url":"https://api.github.com/repos/amhursh/music_shop/tags","blobs_url":"https://api.github.com/repos/amhursh/music_shop/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/amhursh/music_shop/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/amhursh/music_shop/git/refs{/sha}","trees_url":"https://api.github.com/repos/amhursh/music_shop/git/trees{/sha}","statuses_url":"https://api.github.com/repos/amhursh/music_shop/statuses/{sha}","languages_url":"https://api.github.com/repos/amhursh/music_shop/languages","stargazers_url":"https://api.github.com/repos/amhursh/music_shop/stargazers","contributors_url":"https://api.github.com/repos/amhursh/music_shop/contributors","subscribers_url":"https://api.github.com/repos/amhursh/music_shop/subscribers","subscription_url":"https://api.github.com/repos/amhursh/music_shop/subscription","commits_url":"https://api.github.com/repos/amhursh/music_shop/commits{/sha}","git_commits_url":"https://api.github.com/repos/amhursh/music_shop/git/commits{/sha}","comments_url":"https://api.github.com/repos/amhursh/music_shop/comments{/number}","issue_comment_url":"https://api.github.com/repos/amhursh/music_shop/issues/comments{/number}","contents_url":"https://api.github.com/repos/amhursh/music_shop/contents/{+path}","compare_url":"https://api.github.com/repos/amhursh/music_shop/compare/{base}...{head}","merges_url":"https://api.github.com/repos/amhursh/music_shop/merges","archive_url":"https://api.github.com/repos/amhursh/music_shop/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/amhursh/music_shop/downloads","issues_url":"https://api.github.com/repos/amhursh/music_shop/issues{/number}","pulls_url":"https://api.github.com/repos/amhursh/music_shop/pulls{/number}","milestones_url":"https://api.github.com/repos/amhursh/music_shop/milestones{/number}","notifications_url":"https://api.github.com/repos/amhursh/music_shop/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/amhursh/music_shop/labels{/name}","releases_url":"https://api.github.com/repos/amhursh/music_shop/releases{/id}","deployments_url":"https://api.github.com/repos/amhursh/music_shop/deployments","created_at":"2017-09-11T22:14:19Z","updated_at":"2017-10-12T07:43:37Z","pushed_at":"2017-09-21T14:59:15Z","git_url":"git://github.com/amhursh/music_shop.git","ssh_url":"git@github.com:amhursh/music_shop.git","clone_url":"https://github.com/amhursh/music_shop.git","svn_url":"https://github.com/amhursh/music_shop","homepage":null,"size":32320,"stargazers_count":1,"watchers_count":1,"language":"Ruby","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":0,"mirror_url":null,"open_issues_count":3,"forks":0,"open_issues":3,"watchers":1,"default_branch":"master","permissions":{"admin":true,"push":true,"pull":true}}]'
+    http_version: 
+  recorded_at: Thu, 12 Oct 2017 15:21:00 GMT
+recorded_with: VCR 3.0.3
