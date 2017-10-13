@@ -1,66 +1,87 @@
-<h1><%= @user.nickname %></h1>
-<h3><%= link_to "Logout", logout_path %></h3>
+<div class="container-fluid container-profile">
 
-<div class="avatar">
-	<%= image_tag(@user.image) %>	
-</div>
+	<div class="row justify-content-md-center">
 
-<div class="basic_info">
-	<div class="starred_repos">
-		Starred Repos (<%= @starred_count %>)
-	</div>
+		<div class="col col-md-2">
 
-	<div class="followers">
-		Followers (<%= @basic_info[:followers] %>)
-	</div>
+			<div class="avatar">
+				<%= image_tag(@user.image) %>	
+			</div>
+			<br>
+			<h3><%= @user.name %></h3>
+			<p><%= @user.nickname %></p>
+			
+		</div>
 
-	<div class="following">
-		Following (<%= @basic_info[:following] %>)
-	</div>	
-</div>
+		
 
-<div class="commit_feed">
-	Commits
-	<ul class="commit_list">
-		<% @recent_commits.each do |commit| %>
-		<li class="commit">
-			<p><%= commit[:commit][:message] %></p>
-			<p><%= commit[:repository][:full_name] %></p>
-			<p><%= commit[:commit][:author][:date] %></p>
-		</li>
-		<% end %>
-	</ul>
-</div>
+		<div class="col col-md-8">
 
-<div class="following_commit_feed">
-	Follower Activity
-	<ul class="following_user_list">
-		<% @following_commits.each do |user, commits| %>
-		<li class="following_user">
-			<h5><%= user %></h5>
-			<ul class="following_user_commits">
-				<% commits.each do |commit| %>
-				<li class="following_commit">
+			<div class="basic_info">
+				<div class="starred_repos">
+					Starred Repos (<%= @starred_count %>)
+				</div>
+
+				<div class="followers">
+					Followers (<%= @basic_info[:followers] %>)
+				</div>
+
+				<div class="following">
+					Following (<%= @basic_info[:following] %>)
+				</div>	
+			</div>
+
+			<div class="commit_feed">
+				Commits
+				<ul class="commit_list">
+					<% @recent_commits.each do |commit| %>
+					<li class="commit">
 						<p><%= commit[:commit][:message] %></p>
 						<p><%= commit[:repository][:full_name] %></p>
 						<p><%= commit[:commit][:author][:date] %></p>
-				</li>
-				<% end %>
-			</ul>
-		</li>
-		<% end %>
-	</ul>
+					</li>
+					<% end %>
+				</ul>
+			</div>
+
+			<div class="following_commit_feed">
+				Follower Activity
+				<ul class="following_user_list">
+					<% @following_commits.each do |user, commits| %>
+					<li class="following_user">
+						<h5><%= user %></h5>
+						<ul class="following_user_commits">
+							<% commits.each do |commit| %>
+							<li class="following_commit">
+									<p><%= commit[:commit][:message] %></p>
+									<p><%= commit[:repository][:full_name] %></p>
+									<p><%= commit[:commit][:author][:date] %></p>
+							</li>
+							<% end %>
+						</ul>
+					</li>
+					<% end %>
+				</ul>
+			</div>
+
+			<div class="repos">
+				Repositories (<%= @repos.count %>)
+				<ul class="repo_feed">
+					<% @repos.each do |repo| %>
+					<li class="repo">
+						<h5><%= repo[:full_name] %></h5>
+						<p><%= repo[:language] %></p>
+						<p><%= repo[:updated_at] %></p>
+					</li>
+					<% end %>
+				</ul>
+			</div>
+			
+		</div>
+
+
+		
+	</div>
+
 </div>
 
-<div class="repos">
-	Repositories (<%= @repos.count %>)
-	<ul class="repo_feed">
-		<% @repos.each do |repo| %>
-		<li class="repo">
-			<h5><%= repo[:full_name] %></h5>
-			<p><%= repo[:language] %></p>
-			<p><%= repo[:updated_at] %></p>
-		</li>
-		<% end %>
-	</ul>
-</div>

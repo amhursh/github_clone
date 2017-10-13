@@ -1,0 +1,23 @@
+@import "bootstrap";
+
+.profile-pic {
+	width: 25px;
+	height: 25px
+}
+
+.login-box {
+	width: 20%;
+	height: 20%;
+	margin-top: 20%;
+	text-align: center;
+}
+
+.container-login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container-profile {
+	padding-top: 2%;
+}
