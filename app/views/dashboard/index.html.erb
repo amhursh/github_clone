@@ -51,3 +51,16 @@
 		<% end %>
 	</ul>
 </div>
+
+<div class="repos">
+	Repositories (<%= @repos.count %>)
+	<ul class="repo_feed">
+		<% @repos.each do |repo| %>
+		<li class="repo">
+			<h5><%= repo[:full_name] %></h5>
+			<p><%= repo[:language] %></p>
+			<p><%= repo[:updated_at] %></p>
+		</li>
+		<% end %>
+	</ul>
+</div>

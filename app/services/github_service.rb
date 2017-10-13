@@ -42,6 +42,11 @@ class GithubService
     following_commits
   end
 
+  def get_repos
+    response = conn.get("/users/#{user.nickname}/repos?sort=updated")
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
   private
 
     attr_reader :conn,
